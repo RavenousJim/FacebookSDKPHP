@@ -27,5 +27,5 @@ As of today, I do not have the proper authority to auto-post. To get privelages 
 
 
 
-
+You can follow this video for some further help: https://www.youtube.com/watch?v=Zpn19_EvCzg
 
