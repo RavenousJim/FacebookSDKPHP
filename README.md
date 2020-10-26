@@ -12,56 +12,7 @@ How are we going to connect as PHP based mySQL site with Javascript and MongoDB?
 
 If you browse the Facebook Docs you'll find some php based answers, but I was more inclined to use an HTML hook with the Facebook script necessary for the app to communicate with the website.
 
-Go back to your Wordpress site for a moment. Navigate back to the Dashboard. From that screen, open "Appearance" and then "Theme Editor." On the right side you will see Theme Files. In those files, you need to find the file index.php (this could also be done on the code editor of your choice.) We are going to inject our Facebook Scripts into the beginning of the file. That way, when the site is initialized from index.php, our html will be the first thing to run in the browser. I also have a mailchimp application running in a similar fashion. Below is the code I used minus my identification numbers.
-
-<html>
-	<head>
-  </head>	
-	<body>
-		
-		
-		
-		
-		
-		
-<script async defer src="https://connect.facebook.net/en_US/sdk.js">
-		
-		
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : 'your App Id # HERE',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v5.0'
-    });
-  };
-			FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    // The user is logged in and has authenticated your
-    // app, and response.authResponse supplies
-    // the user's ID, a valid access token, a signed
-    // request, and the time the access token 
-    // and signed request each expire.
-    var uid = response.authResponse.userID;
-    var accessToken = response.authResponse.accessToken;
-  } else if (response.status === 'not_authorized') {
-    // The user hasn't authorized your application.  They
-    // must click the Login button, or you must call FB.login
-    // in response to a user gesture, to launch a login dialog.
-  } else {
-    // The user isn't logged in to Facebook. You can launch a
-    // login dialog with a user gesture, but the user may have
-    // to log in to Facebook before authorizing your application.
-  }
- });
-			FB.getLoginStatus(function(response) {
-  // this will be called when the roundtrip to Facebook has completed
-}, true);
-			FB.Event.subscribe(event, callback)
-</script>
-		
-	</body>
-</html>
+Go back to your Wordpress site for a moment. Navigate back to the Dashboard. From that screen, open "Appearance" and then "Theme Editor." On the right side you will see Theme Files. In those files, you need to find the file index.php (this could also be done on the code editor of your choice.) We are going to inject our Facebook Scripts into the beginning of the file. That way, when the site is initialized from index.php, our html will be the first thing to run in the browser. I also have a mailchimp application running in a similar fashion. You can copy the code from the FBHook.php file.
 
 
 Make sure that you click the Update File button in wordpress after you have added your code.
