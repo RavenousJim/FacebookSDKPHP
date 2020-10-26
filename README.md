@@ -18,12 +18,12 @@ Go back to your Wordpress site for a moment. Navigate back to the Dashboard. Fro
 	<head>
   </head>	
 	<body>
-		<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/);</script>
 		
 		
 		
 		
-		<div id="fb-root"></div>
+		
+		
 <script async defer src="https://connect.facebook.net/en_US/sdk.js">
 		
 		
